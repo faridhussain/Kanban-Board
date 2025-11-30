@@ -37,3 +37,20 @@ addDragEventsOnColumn(todo);
 addDragEventsOnColumn(progress);
 addDragEventsOnColumn(done);
 
+const toggleModalButton = document.querySelector("#toggle-modal");
+const modal = document.querySelector(".modal");
+const modalBg = document.querySelector(".modal .bg");
+const addTaskButton = document.querySelector(".modal #add-new-task");
+
+toggleModalButton.addEventListener("click", () => {
+  modal.classList.toggle("active");
+});
+
+modalBg.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+addTaskButton.addEventListener("click", () => {
+  const taskTitle = document.querySelector("#text-title-input");
+  const taskDesc = document.querySelector("#task-desc-input");
+});
